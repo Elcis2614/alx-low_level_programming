@@ -1,5 +1,6 @@
 /*comment*/
 #include <stdio.h>
+#include <string.h>
 /**
  * main -  entry point
  *
@@ -7,8 +8,10 @@
  */
 int main(void)
 {
-	int my_array[58] = "\"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char my_array[31] = "and that piece of art is useful";
+	char my_arrayT[28] = "\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(my_array, 58, sizeof(char), stderr);
+	strncat(my_array, my_arrayT, 28);
+	fwrite(my_array, 59, sizeof(char), stderr);
 	return (0);
 }

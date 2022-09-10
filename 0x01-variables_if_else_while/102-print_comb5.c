@@ -15,7 +15,7 @@ int main(void)
 	/*print digits*/
 	for (i = 48; i <= 57; i++)
 	{
-		for (j = 48; j <= 58; j++)
+		for (j = 48; j <= 57; j++)
 		{
 			l = j + 1;
 			for (k = i; k <= 57; k++)
@@ -36,6 +36,8 @@ int main(void)
 				}
 				l = 48;
 			}
+			if (i == 57 && j == 57)
+				return (0);
 		}
 	}
 	putchar('\n');

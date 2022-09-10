@@ -37,8 +37,10 @@ int main(void)
 				l = 48;
 			}
 			if (i == 57 && j == 57)
-				return (0);
+				break;
 		}
+		if (i == 57)
+			break;
 	}
 	putchar('\n');
 	return (0);

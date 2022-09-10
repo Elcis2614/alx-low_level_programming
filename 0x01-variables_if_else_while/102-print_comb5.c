@@ -32,9 +32,9 @@ int main(void)
 						putchar(44);
 						putchar(' ');
 					}
-					l += 1;
+					l++;
 				}
-				l = 0;
+				l = 48;
 			}
 		}
 	}

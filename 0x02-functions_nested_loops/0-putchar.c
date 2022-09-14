@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- *firstfunction - Entry point
+ *main - Entry point
  *
  * Return: a 0
 */
-int firstprint(void)
+int main(void)
 {
 	char *x = "_putchar";
 

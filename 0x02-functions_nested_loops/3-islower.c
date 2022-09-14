@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  *_islower - checks if a  character is lower
  *
@@ -8,11 +9,8 @@
  */
 int _islower(int c)
 {
-	int i;
-
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	_putchar('\n');
+	if (islower(c) != 0)
+		return (1);
+	else
+		return (0);
 }

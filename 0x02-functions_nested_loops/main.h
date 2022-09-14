@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include "0-putchar.c"
-/**
- *main - Entry point
- *
- * Return: a 0
-*/
-int _putchar(void);
+#ifndef MAIN_H
+#define MAIN_H
+int _putchar(char c);
+int firstprint(void);
+#endif

@@ -1,18 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *main - Entry point
+ *firstfunction - Entry point
  *
  * Return: a 0
 */
-int main(void)
+int firstprint(void)
 {
 	char *x = "_putchar";
 
 	while (*x)
 	{
-		putchar(*x);
+		_putchar(*x);
 		x++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }

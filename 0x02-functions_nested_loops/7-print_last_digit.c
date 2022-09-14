@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  *print_last_digit - prints the alphabet in lower case
  *
@@ -8,9 +9,9 @@
 */
 int print_last_digit(int c)
 {
-	int value,x;
+	int value, x;
 
-	value = c % 10;
+	value = abs(c % 10);
 	x = value + '0';
 	_putchar(x);
 	return (value);

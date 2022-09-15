@@ -15,8 +15,7 @@ void print_to_98(int n)
 		{
 			printf("%d", i);
 			if (i == 98)
-				break;
-				/*_putchar('\n');*/
+				printf("%s\n");
 			else
 				printf(", ");
 		}
@@ -25,8 +24,7 @@ void print_to_98(int n)
 		{
 			printf("%d", i);
 			if (i == 98)
-				break;
-				/*_putchar('\n');*/
+				printf("%s\n");
 			else
 				printf(", ");
 		}

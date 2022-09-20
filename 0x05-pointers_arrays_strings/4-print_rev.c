@@ -1,4 +1,6 @@
 #include "main.h"
+#include "3-puts.c"
+#include "2-strlen.c"
 /**
  *print_rev -  prints a string to the stout in reverse order
  *

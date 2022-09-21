@@ -9,19 +9,14 @@
  */
 void rev_string(char *s)
 {
-	size_t n;
-	char *c;
+	int n, i;
+	char c;
 
 	n = strlen(s);
-	c = malloc(n + 1);
-	if (c != NULL)
+	for (i = 0; i < n / 2; i++)
 	{
-		c += n;
-		*c = '\0';
-		while (*s)
-		{
-			*--c = *s++;
-		}
+		c = s[i];
+		s[i] = s[n - i - 1];
+		s[n - i - 1] = c;
 	}
-	puts(c);
 }

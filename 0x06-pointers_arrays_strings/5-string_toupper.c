@@ -8,15 +8,11 @@
 char *string_toupper(char *a)
 {
 	int i, n;
-	char *newA;
 
 	n = strlen(a);
-	newA = malloc(n - 1);
-
 	for (i = 0; i < n; i++)
 	{
-		newA[i] = toupper(a[i]);
-		a[i] = newA[i];
+		a[i] = toupper(a[i]);
 	}
-	return (newA);
+	return (a);
 }

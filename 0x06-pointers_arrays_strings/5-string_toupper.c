@@ -15,13 +15,8 @@ char *string_toupper(char *a)
 
 	for (i = 0; i < n; i++)
 	{
-		if (isalpha(a[i]) != 0)
-		{
-			newA[i] = toupper(a[i]);
-		}
-		else
-			newA[i] = a[i];
-
+		newA[i] = toupper(a[i]);
+		a[i] = newA[i];
 	}
 	return (newA);
 }

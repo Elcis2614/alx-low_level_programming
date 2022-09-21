@@ -1,25 +1,26 @@
 #include "main.h"
+#include <string.h>
 /**
  *print_rev -  prints a string to the stout in reverse order
  *
  * @s: the string to be printed
+ * source : https://stackoverflow.com/a/72097452
  */
 void print_rev(char *s)
 {
-	int n, i;
-	char t;
+	size_t n;
+	char *c;
 
-	n = 0;
-	while (*s)
+	n = strlen(s);
+	c = malloc(n + 1);
+	if (c != NULL)
 	{
-		n++;
-		s++;
-	}
-	for (i = 0 ; i < n / 2; i++)
-	{
-		t = s[i];
-		s[i] = s[n - i - 1];
-		s[n - i - 1] = t;
+		c += n;
+		*t = '\0';
+		while (*s)
+		{
+			*--c = *s++;
+		}
 	}
 	puts(s);
 }

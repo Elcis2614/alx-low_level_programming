@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 /**
  *print_rev -  prints a string to the stout in reverse order
  *
@@ -16,11 +17,11 @@ void print_rev(char *s)
 	if (c != NULL)
 	{
 		c += n;
-		*t = '\0';
+		*c = '\0';
 		while (*s)
 		{
 			*--c = *s++;
 		}
 	}
-	puts(s);
+	puts(c);
 }

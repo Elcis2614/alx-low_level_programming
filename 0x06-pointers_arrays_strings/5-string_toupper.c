@@ -11,7 +11,7 @@ char *string_toupper(char *a)
 	char *newA;
 
 	n = strlen(a);
-	newA = malloc(n);
+	newA = malloc(n - 1);
 
 	for (i = 0; i < n; i++)
 	{

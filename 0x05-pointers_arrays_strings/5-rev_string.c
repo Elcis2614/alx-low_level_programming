@@ -1,6 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stdlib.h>
 /**
  *rev_string -  prints a string to the stout in reverse order
  *

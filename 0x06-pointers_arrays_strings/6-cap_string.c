@@ -16,5 +16,7 @@ char *cap_string(char *a)
 		if (isalnum(a[i]) == 0)
 			a[i + 1] = toupper(a[i + 1]);
 	}
+	if (isalnum(a[n - 1]) != 0 && isalnum(a[n - 2]))
+		a[n - 1] = toupper(a[n - 1]);
 	return (a);
 }

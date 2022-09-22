@@ -12,7 +12,7 @@ char *leet(char *a)
 	n = strlen(a);
 	for (i = 0; i < n; i++)
 	{
-		if (tolower(a[i]) == 'a')
+		if (a[i] == 'a' || a[i] == 'A')
 			a[i] = '4';
 		else if (tolower(a[i]) == 'e')
 			a[i] = '3';

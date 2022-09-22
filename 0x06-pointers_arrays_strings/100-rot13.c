@@ -28,8 +28,8 @@ char *rot13(char *a)
 			a[i] = c[k];
 			continue;
 		}
-		else 
-			while (k !=0)
+		else
+			while (k != 0)
 			{
 				a[i] = l[k - 26];
 				break;

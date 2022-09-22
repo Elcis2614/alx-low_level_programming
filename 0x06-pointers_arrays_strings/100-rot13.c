@@ -19,7 +19,7 @@ char *rot13(char *a)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (tolower(a[i]) == l[j])
+			if (a[i] == l[j])
 				a[i] = c[j];
 		}
 	}

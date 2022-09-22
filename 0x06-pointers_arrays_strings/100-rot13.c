@@ -17,7 +17,7 @@ char *rot13(char *a)
 	n = strlen(a);
 	for (i = 0; i < n; i++)
 	{
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 26; j++)
 		{
 			if (a[i] == l[j])
 				a[i] = c[j];

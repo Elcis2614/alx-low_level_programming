@@ -26,8 +26,8 @@ void print_number(int n)
 		int t = x / k;
 
 		_putchar(t + '0');
-		x = x  - (t * K);
+		x = x  - (t * k);
 		k = k / 10;
 	}
-	putchar(x % 10 + '0');
+	_putchar((x % 10) + '0');
 }

@@ -1,24 +1,22 @@
 #include "main.h"
 /**
- *print_diagsums - prints the two diagonals
- *@a: the matrice
- *@size: the size of the matrix
+ *print_diagsums - print the sums of daigonals
+ *@a: the array
+ *@size: the size of the array
  */
 void print_diagsums(int *a, int size)
 {
-	int i, d1, d2, j;
+	int i, *p, s1, s2;
 
-	d1 = 0;
-	d2 = 0;
-	j = size - 1;
+	p = &a[0];
+	s1 = 0;
+	s2 = 0;
 	for (i = 0; i < size; i++)
 	{
-		d1 += a[i][i];
-		d2 += a[i][j - i];
-		j--;
+		int t = *(p + ((i * size) + i));
+
+		s1 += t;
+		s2 += *(p + ((i * size) + (size - i - 1)));
 	}
-	_putchar(d1 + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(d2 + '0');
+	printf("%d, %d\n", s1, s2);
 }

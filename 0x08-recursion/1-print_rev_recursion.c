@@ -10,8 +10,9 @@ void _print_rev_recursion(char *s)
 	if (t == 0)
 		return;
 	_putchar(s[t - 1]);
-	char *x = malloc(t - 1);
+	char *x;
 
+	x = malloc(t - 1);
 	memcpy(x, s, t - 1);
 	_print_rev_recursion(x);
 }

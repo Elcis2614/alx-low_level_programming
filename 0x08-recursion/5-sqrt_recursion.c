@@ -10,7 +10,7 @@ int _sqrt_recursion(int n)
 
 	if (n >= 0)
 	{
-		x = sqrt(n);
+		x = (int)pow(n, 0.5);
 		if (n * n != x)
 			x = -1;
 	}

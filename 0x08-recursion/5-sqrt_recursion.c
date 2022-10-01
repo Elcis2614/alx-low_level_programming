@@ -12,7 +12,7 @@ int s(int low, int high, int N)
 	if (low <= high)
 	{
 		/* Find the mid-value of the range*/
-		int mid = (low + high) / 2;
+		long int mid = (low + high) / 2;
 
 		if ((mid * mid <= N) && ((mid + 1) * (mid + 1) > N))
 		{

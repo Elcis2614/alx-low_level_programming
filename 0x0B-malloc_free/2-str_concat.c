@@ -28,9 +28,10 @@ char *str_concat(char *s1, char *s2)
 		y = strlen(s2);
 	}
 	s = malloc(sizeof(char) * (x + y + 1));
+	i = 0;
 	if (s == NULL)
 		return (NULL);
-	while (i  < x && x != 0)
+	while (i < x && x != 0)
 		s[i] = s1[i];
 	while (i < (x + y) && y != 0)
 		s[i] = s2[i - x];

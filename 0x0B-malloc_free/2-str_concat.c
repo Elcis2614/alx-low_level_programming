@@ -10,7 +10,11 @@ char *str_concat(char *s1, char *s2)
 	int x, y, i;
 	char *s;
 
-	if (s2 == NULL)
+	if (s1 == s2 == NULL)
+	{
+		x = y = 0;
+	}
+	else if (s2 == NULL)
 	{
 		y = 0;
 		x = strlen(s1);

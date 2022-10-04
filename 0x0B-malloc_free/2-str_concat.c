@@ -32,8 +32,14 @@ char *str_concat(char *s1, char *s2)
 	if (s == NULL)
 		return (NULL);
 	while (i < x && x != 0)
+	{
 		s[i] = s1[i];
+		i++;
+	}
 	while (i < (x + y) && y != 0)
+	{
 		s[i] = s2[i - x];
+		i++;
+	}
 	return (s);
 }

@@ -5,7 +5,7 @@
  * @s2: string 2
  * Return: the pointer to the complety string
  */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	int x, y, i;
 	char *s;

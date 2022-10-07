@@ -1,15 +1,17 @@
 #include "main.h"
 /**
  *malloc_checked - allocates memory and cause normal process termination
- *@b: the int
- *Return: the malloc
+ *@b: the size of memory to allocate 
+ *Return: the adress on success
  */
 void *malloc_checked(unsigned int b)
 {
-	if (malloc(sizeof(b)) == NULL)
+	void *c;
+
+	c = malloc(b);
+	if (c == NULL)
 	{
-		exit(98);
+		exit(98); 
 	}
-	else
-		return (malloc(sizeof(b)));
+	return(c);
 }

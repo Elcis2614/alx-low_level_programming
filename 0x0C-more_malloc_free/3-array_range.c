@@ -10,13 +10,13 @@ int *array_range(int min, int max)
 	int i, range;
 	int *c;
 
-	if (min > max || min == NULL || max == NULL)
+	if (min > max)
 		return (NULL);
 	range = max - min + 1;
-	c = (int *) malloc(range);
+	c = malloc((size_t)range * sizeof(min));
 	if (c == NULL)
 		return (NULL);
-	for (i = min; i < range; i++)
+	for (i = min; i < (max + 1); i++)
 	{
 		c[i - min] = i;
 	}

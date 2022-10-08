@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	temp = (char *) c;
 	for (i = 0; i < (nmemb * size); i++)
 	{
-		*temp = 48;
+		*temp = (char) 48;
 		temp++;
 
 	}

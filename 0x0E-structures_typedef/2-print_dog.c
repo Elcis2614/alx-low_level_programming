@@ -1,5 +1,7 @@
 #include "main.h"
-/*
+/**
+ *print_dog - print the dog info
+ *@d: dog object
  */
 void print_dog(struct dog *d)
 {

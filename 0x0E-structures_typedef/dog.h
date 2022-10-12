@@ -1,6 +1,6 @@
-#ifndef DOG_H
+#ifndef MAIN_H
 
-#define DOG_H
+#define MAIN_H
 
 /**
  *struct dog - structure

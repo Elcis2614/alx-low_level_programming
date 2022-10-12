@@ -1,4 +1,5 @@
-#include "main.h"
+#include "dog.h"
+#include "stdlib.h"
 /**
  *print_dog - print the dog info
  *@d: dog object

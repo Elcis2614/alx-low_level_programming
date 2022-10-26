@@ -2,7 +2,7 @@
 
 	section .data
 msg:	db "Hello, Holberton",0xa
-fmt:	db "%s", 10, 0
+fmt:	db "%s", 16, 0
 
 	section .text
 

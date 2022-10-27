@@ -2,6 +2,7 @@
 /**
  *pop_listint - pops the head
  *@head: head of the list
+ *Return: number the head data
  */
 int pop_listint(listint_t **head)
 {
@@ -13,7 +14,10 @@ int pop_listint(listint_t **head)
 	{
 		x = tail->n;
 		if (tail->next == NULL)
+		{
 			free(tail);
+			*head = NULL;
+		}
 		else
 		{
 			*head = tail->next;

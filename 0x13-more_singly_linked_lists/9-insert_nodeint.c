@@ -4,6 +4,7 @@
  * @head: the head of linked list
  * @idx: the index to insert to
  * @n: the data to add
+ * Return: the node inserted
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {

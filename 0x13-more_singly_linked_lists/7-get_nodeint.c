@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *get_nodeint-at_index - returns the nth node;
+ *get_nodeint_at_index - returns the nth node;
  *@head: head of the list
  *@index: the index of the element
  *Return: the index element
@@ -16,9 +16,8 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	for (i = 0; i < index; i++)
 	{
 		if (tail->next == NULL)
-			return (tail);
-		else
-			tail = tail->next;
+			return (NULL);
+		tail = tail->next;
 	}
 	return (tail);
 }

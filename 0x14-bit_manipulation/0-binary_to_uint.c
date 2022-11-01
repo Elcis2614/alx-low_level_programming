@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * binary_to_uint - convert bin to uint
  * @s: the bin word
@@ -18,11 +19,11 @@ unsigned int binary_to_uint(const char *s)
 	}
 	--s;
 	value = 0;
-	n = 0;
+	n = 1;
 	while (*s)
 	{
-		value += (*b - '0') * pow(2, n);
-		n++;
+		value += (*s - '0') * n;
+		n *= 2;
 		s--;
 	}
 	return (value);

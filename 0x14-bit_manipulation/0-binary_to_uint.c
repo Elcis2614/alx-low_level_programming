@@ -6,7 +6,7 @@
  */
 unsigned int binary_to_uint(const char *s)
 {
-	unsigned int value;
+	unsigned int value, n;
 
 	if (s == NULL)
 		return (0);
@@ -18,10 +18,12 @@ unsigned int binary_to_uint(const char *s)
 	}
 	--s;
 	value = 0;
+	n = 0;
 	while (*s)
 	{
 		value += (*b - '0') * pow(2, n);
-		b++;
+		n++;
+		s--;
 	}
 	return (value);
 }

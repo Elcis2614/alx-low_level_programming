@@ -8,4 +8,5 @@ void printArray(int *array, int high, int low);
 int jump_search(int *array, size_t size, int value);
 int interpolation_search(int *array, size_t size, int value);
 size_t position(int *array, size_t high, size_t low, int value);
+int exponential_search(int *array, size_t size, int value);
 #endif

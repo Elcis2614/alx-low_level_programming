@@ -3,38 +3,45 @@
 /**
  * jump_search - searches value in sorted array of int using the Jump search
  * @array: the pointer to the array being searched in
- * @size: the size of the array
+ * @size: the (int)size of the array
  * @value: the key being search for
  * Return: the index of value if found, or -1 otherwise
 */
 
 int jump_search(int *array, size_t size, int value)
 {
-	int frontS, backS, jump_step;
+	int frontS, backS, jump_step, index;
 
-	if (array != NULL && size > 0)
+	if (array != NULL && (int)size > 0)
 	{
 
 		jump_step = (int)sqrt(size);
 		frontS = jump_step;
 		backS = 0;
 
-		while (array[backS] < value and frontS < size - 1)
+		while (backS <= (int)(size - 1))
 		{
+			if (array[backS] >= value)
+				break;
 			printf("Value checked array[%i] = [%i]\n", backS, array[backS]);
-			frontS += jump_step;
 			backS += jump_step;
 		}
-		if (array[backs] >= value)
-		{
-			backS -= jump_search;
-			frontS -= jump_search;
-		}
-		else
-			frontS = size - 1;
+		frontS = backS;
+		backS -= jump_step;
+		if (backS > (int)(size - 1))
+			return (-1);
 
-		printf("Value found between indexes [%i] and [%i]", backS, frontS);
-		return (linear_search(array + backS, frontS - backS, value));
+		printf("Value found between indexes [%i] and [%i]\n", backS, frontS);
+
+		if (frontS > (int)(size - 1))
+			frontS = (int)(size - 1);
+
+		for (index = backS; index <= frontS; index++)
+		{
+			printf("Value checked array[%i] = [%i]\n", index, array[index]);
+			if (array[index] == value)
+				return (index);
+		}
 	}
 	return (-1);
 }

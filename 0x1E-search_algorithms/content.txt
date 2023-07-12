@@ -1,0 +1,127 @@
+//search_algos.h
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
+#include <stdio.h>
+#include <stdlib.h>
+int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+#endif
+//0-linear.c
+#include "search_algos.h"
+/*
+ *linear_search - searches for a value in an array of integers using the Linear search algorithm
+ *@array: the pointer to array containing the values
+ *@size: the size of the array
+ *@value: the value to be searched
+ *Return: the index of the @value in the array or -1 otherwise
+*/
+int linear_search(int *array, size_t size, int value){
+	int i;
+	
+	if (array != NULL && size > 0)
+		for (i = 0 ; i < size; i ++){
+			printf("Value checked array[%i] = [%i]\n", i, array[i]);
+			if (array[i] == value)
+				return (i);
+		}
+	return (-1);
+}
+//1-binary.c
+#include "search_algos.h"
+/*
+ *binary_search - searches for a value in a sorted array of integers using the Binary search algorithm
+ *@array: the pointer to the first element of the array
+ *@size: the size of the array
+ *@value: the value to be searched for
+ #Return: the index of the value found
+*/
+int binary_search(int *array, size_t size, int value){
+	int i, mid, low, high;
+	
+	if (array != NULL && size > 0){
+	    low = 0;
+	    high = size - 1;
+		mid = (size - 1) / 2;
+		
+		while (low <= high ) {
+		printArray(array, high, low);
+		if (value == array[mid])
+			return (mid);
+		
+		else if (value < array[mid])
+		    high = mid - 1;
+			
+		else 
+			low = mid + 1;
+		mid = (high + low ) / 2;
+		}
+	}
+	return (-1); 
+}
+/*
+ *printArray - prints an array based on the low and high indexes
+ *@array: the array to be printed\
+ *@high: the higher index
+ *@low: the lower index
+*/
+void printArray(int *array,int high, int low)
+{
+    int i;
+	
+    printf("Searching in array: ");
+	for (i = low; i < high ; i++)
+		printf("%i, ", array[i]);
+	printf("%i\n", array[high]);
+}
+//2-O
+O(n)
+
+//3-O
+O(1)
+
+//4-O
+O(logn)
+
+//5-0
+O(1)
+
+//6-0
+O(n^2)
+
+//100-jump.c
+#include "search_algos.h"
+#include <math.h>
+/*
+ *jump_search -  searches for a value in a sorted array of integers using the Jump search algorithm
+ *@array: the pointer to the array being searched in
+ *@value: the key being search for
+*/
+
+int jump_search(int *array, size_t size, int value)
+{
+	int frontS , backS, jump_step;
+	
+	if (array != NULL && size > 0)
+	{
+		
+		jump_step = (int) sqrt(size);
+		frontS = jump_step;
+		backS = 0;
+		
+		while (array[backS] < value and frontS < size - 1){
+			printf("Value checked array[%i] = [%i]\n", backS, array[backS]);
+			frontS += jump_step;
+			backS += jump_step;
+		}
+		if (array[backs] >= value){
+			backS -= jump_search;
+			frontS -= jump_search;
+		}
+		else
+			frontS = size - 1;
+		
+		printf("Value found between indexes [%i] and [%i]", backS, frontS); 
+		return (linear_search(array + backS, frontS - backS, value));
+	}
+	return (-1);
+}	

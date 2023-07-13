@@ -29,10 +29,10 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			counter--;
 		}
 
-		while (head->next != NULL)
+		while (head != NULL)
 		{
 			printf("Value checked at index [%lu] = [%i]\n", head->index, head->n);
-			if (head->n > value)
+			if (head->n > value || head->next == NULL)
 				break;
 			counter = step;
 			tail = head;

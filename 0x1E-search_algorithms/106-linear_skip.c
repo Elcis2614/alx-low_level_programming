@@ -15,13 +15,18 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		head = list->express;
 		tail = list;
 
-		while (head->express != NULL)
+		while (head != NULL)
 		{
 			printf("Value checked at index [%lu] = [%i]\n", head->index, head->n);
 			if (head->n >= value)
 				break;
-			tail = head;
-			head = head->express;
+			if (head->express != NULL)
+			{
+				tail = head;
+				head = head->express;
+			}
+			else
+				break;
 		}
 		if (head->n < value)
 		{
@@ -31,7 +36,6 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		}
 		printf("Value found between indexes [%lu] and [%lu]\n",
 		tail->index, head->index);
-		printf("index of head : [%lu]\n", head->index);
 		while (tail != NULL && tail->index <= head->index)
 		{
 			printf("Value checked at index [%lu] = [%i]\n", tail->index, tail->n);
